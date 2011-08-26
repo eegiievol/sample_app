@@ -1,17 +1,21 @@
 class PagesController < ApplicationController
   def home
-    @title = '_Home_'
+    @title = 'Home'
     @pg_name = 'Home'
   end
 
   def contact
-    @title = '_Contact_'
+    @title = 'Contact'
     @pg_name = 'Contact'
   end
   
   def about
-    @title = '_About_'
+    @title = 'About'
     @pg_name = 'About'
   end
   
+  def help
+    @title = 'Help'
+    @pg_name = 'Help'
+  end
 end

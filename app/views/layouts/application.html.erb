@@ -3,18 +3,28 @@
     <head>
         <title><%= title %></title>
         <%= csrf_meta_tag %>
-        <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-        <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+        <%= render 'layouts/stylesheets'%>
     </head>
     
     <body>
-        <h1>Sample App (<%= @pg_name %>)</h1>
-        <p>
-            This is the <%= @pg_name %> page for the 
-            <a href="http://railstutorial.org">Ruby on Rails Tutorial</a>
-            sample application.
-        </p>
-        
-        <%= yield %>
+        <div class='container'>
+            <%= render 'layouts/header' %>
+            <section class='round'>
+                <%= yield %>
+            </section>
+            <%= render 'layouts/footer' %>
+        </div>
     </body>
 </html>
+
+<!-- 
+
+
+                <h1>Sample App (<%= @pg_name %>)</h1>
+                <p>
+                    This is the <%= @pg_name %> page for the 
+                    <a href="http://railstutorial.org">Ruby on Rails Tutorial</a>
+                    sample application.
+                </p>
+
+-->
